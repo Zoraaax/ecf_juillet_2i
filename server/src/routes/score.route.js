@@ -1,5 +1,4 @@
 const ScoreController = require('../controllers/score.controller.js');
-const authenticateToken = require('../middlewares/auth.middleware.js');
 
 const BaseRouter = require('./base.route');
 
