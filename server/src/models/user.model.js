@@ -29,10 +29,6 @@ const userSchema = new mongoose.Schema({
         currentScore: {
             type: Number,
             default: 0
-        },
-        maxScore: {
-            type: Number,
-            default: 0
         }
     }
 })
