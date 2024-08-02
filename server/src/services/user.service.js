@@ -1,21 +1,12 @@
 const UserRepository = require('../repository/user.repository.js')
-const bcrypt = require('bcrypt')
 
 class UserService {
     constructor() {
         this.userRepository = new UserRepository()
     }
 
-    async hashPassword(password = '') {
-        return bcrypt.hash(password, 10)
-    } 
-
     async create(user) {
         try {
-            let password = user.password
-            const hashedPassword = await this.hashPassword(password)
-            user.password = hashedPassword
-    
             return this.userRepository.create(user)
         } catch (error) {
             throw new Error(error)
@@ -29,11 +20,6 @@ class UserService {
             } else if (!user) {
                 throw new Error('Les informations de l\'utilisateur sont obligatoires')
             } else {
-    
-                let password = user.password
-                const hashedPassword = await this.hashPassword(password)
-                user.password = hashedPassword
-        
                 return this.userRepository.update(id, user)
             }
         } catch (error) {

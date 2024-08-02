@@ -1,0 +1,20 @@
+@import '../global.scss';
+
+.button {
+    font-size: 2rem;
+    color: $primary-color;
+    font-family: $heading-font;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    
+    &--primary {
+        background-color: $secondary-color;
+        padding: 0.8rem 4rem 0.8rem 4rem;
+    }
+    &--secondary {
+        background-color: $secondary-color;
+        padding: 0.9rem 1.9rem 0.9rem 1.9rem;
+    }
+}

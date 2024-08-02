@@ -1,0 +1,19 @@
+@import '../global.scss';
+
+.header {
+    display: flex;
+    margin-left: 3.8rem;
+
+    &__title {
+        font-size: 4rem;
+        line-height: 1;
+        color: $secondary-color;
+        font-family: $logo-font;
+    }
+    &__subtitle {
+        font-size: 1.6rem;
+        color: $secondary-color;
+        font-family: $heading-font;
+        font-weight: 500;
+    }
+}
