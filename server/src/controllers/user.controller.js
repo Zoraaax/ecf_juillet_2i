@@ -43,15 +43,6 @@ class UserController {
             res.status(400).json({ error: error.message })
         }
     }
-
-    async findTenBestScores(req, res) {
-        try {
-            const bestScores = await this.userService.findTenBestScores()
-            res.status(200).json(bestScores)
-        } catch (error) {
-            res.status(400).json({ error: error.message })
-        }
-    }
 }
 
 module.exports = UserController
